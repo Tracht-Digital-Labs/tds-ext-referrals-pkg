@@ -38,7 +38,7 @@ export default function ReferralsPortal() {
   const load = async () => {
     const res = await apiFetch("/referrals/me").catch(() => null);
     if (res === null) {
-      setError("Die Übersicht konnte nicht geladen werden — die Verbindung ist unterbrochen. Bitte später erneut versuchen.");
+      setError("Die Übersicht konnte nicht geladen werden, die Verbindung ist unterbrochen. Bitte später erneut versuchen.");
     } else if (res.status === 404) {
       setError("Ihr Zugang ist noch keinem Partnerkonto zugeordnet. Bitte melden Sie sich bei uns, dann schalten wir es frei.");
     } else if (res.status === 403) {
@@ -182,7 +182,7 @@ function PayoutDetails({ partner, onSaved }: { partner: Partner; onSaved: (p: Pa
     const res = await sendJson("/referrals/me/payout-details", "PUT", { payout_name: name, iban, tax_status: tax, vat_id: vatId }).catch(() => null);
     setBusy(false);
     if (res === null) {
-      toast.danger("Speichern fehlgeschlagen — die API ist nicht erreichbar.");
+      toast.danger("Speichern fehlgeschlagen, die API ist nicht erreichbar.");
       return;
     }
     if (!res.ok) {

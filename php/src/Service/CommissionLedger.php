@@ -266,7 +266,7 @@ final class CommissionLedger
             'commission_cents' => $commission,
             'status' => $own ? 'rejected' : 'pending',
             'note' => $own
-                ? self::clip(trim(($sale['note'] ?? '') . "\nEigenkauf des Partners — keine Provision."), 500)
+                ? self::clip(trim(($sale['note'] ?? '') . "\nEigenkauf des Partners, keine Provision."), 500)
                 : ($sale['note'] ?? null),
         ];
     }

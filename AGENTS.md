@@ -30,6 +30,7 @@ composer install && composer test   # phpunit (DB-free)
 - Every route change updates `php/docs/api.php`. Migrations stay in the `20261011*` band.
 - No CSS; shared `tds-shared` classes only. `apiFetch`, never a relative `fetch`.
 - Versions move via the release workflow only; stay in the `0.1.x` line the products pin.
+- Follows the TDS quality standard (`../tds-ops/standards/quality.md`): no AI slop, clean code.
 
 ## Topic files
 

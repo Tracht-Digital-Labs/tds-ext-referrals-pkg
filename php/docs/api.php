@@ -9,7 +9,7 @@
 declare(strict_types=1);
 
 $id = ['in' => 'path', 'name' => 'id', 'description' => 'Numerische Id.'];
-$err = ['status' => 422, 'description' => '`{error}` — deutsche Meldung, unverändert anzeigbar.'];
+$err = ['status' => 422, 'description' => '`{error}`, deutsche Meldung, unverändert anzeigbar.'];
 
 $commissionAction = static fn (string $action, string $summary, string $description, array $params = []): array => [
     'method' => 'POST',
@@ -32,7 +32,7 @@ return [
         'pattern' => '/admin/referrals/overview',
         'summary' => 'Partner, Vermittlungen, Auszahlungen und Sätze für das Panel',
         'description' => 'Ein Aufruf für die ganze Verwaltungsseite. Gibt vorher fällige Provisionen frei '
-            . '(bezahlt und Wartefrist vorbei) — ohne Cron, wie der Amazon-Abgleich.',
+            . '(bezahlt und Wartefrist vorbei), ohne Cron, wie der Amazon-Abgleich.',
         'tag' => 'Übersicht',
         'permission' => 'referrals:read',
         'responses' => [['status' => 200, 'description' => '`{partners, commissions, payouts, product_rates, settings}`']],
@@ -149,7 +149,7 @@ return [
         'method' => 'GET',
         'pattern' => '/admin/referrals/payouts/{id:[0-9]+}',
         'summary' => 'Provisionsabrechnung einer Auszahlung',
-        'description' => 'Positionen, Partner mit vollständiger IBAN und bei `vat` die Umsatzsteuer (19 %) — die Vorlage für die Gutschrift.',
+        'description' => 'Positionen, Partner mit vollständiger IBAN und bei `vat` die Umsatzsteuer (19 %), die Vorlage für die Gutschrift.',
         'tag' => 'Auszahlungen',
         'permission' => 'referrals:read',
         'params' => [$id],

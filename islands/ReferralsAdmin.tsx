@@ -54,7 +54,7 @@ export default function ReferralsAdmin() {
   const load = async () => {
     const res = await apiFetch("/admin/referrals/overview").catch(() => null);
     if (res === null) {
-      setError("Provisionen konnten nicht geladen werden — die API ist nicht erreichbar.");
+      setError("Provisionen konnten nicht geladen werden, die API ist nicht erreichbar.");
     } else if (!res.ok) {
       setError(await errorText(res, "Provisionen konnten nicht geladen werden"));
     } else {
@@ -71,7 +71,7 @@ export default function ReferralsAdmin() {
   const mutate = async (path: string, init: RequestInit, success: string): Promise<boolean> => {
     const res = await apiFetch(path, init).catch(() => null);
     if (res === null) {
-      toast.danger("Fehlgeschlagen — die API ist nicht erreichbar.");
+      toast.danger("Fehlgeschlagen, die API ist nicht erreichbar.");
       return false;
     }
     if (!res.ok) {
