@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Alert, Spinner } from "@tracht-digital-solutions/tds-shared/components";
-import { useRuntimeSettings } from "@tracht-digital-solutions/tds-shared/admin";
+import { Alert, Spinner } from "@tracht-digital-labs/tds-shared/components";
+import { useRuntimeSettings } from "@tracht-digital-labs/tds-shared/admin";
 
 const FIELDS = [
   { key: "default_rate_percent", label: "Standard-Provision (% vom Netto)", placeholder: "10", inputMode: "decimal" as const },

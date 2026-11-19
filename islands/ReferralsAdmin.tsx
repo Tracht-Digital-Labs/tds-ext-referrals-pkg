@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { Alert, ConfirmDialog, Spinner, toast } from "@tracht-digital-solutions/tds-shared/components";
-import { apiFetch } from "@tracht-digital-solutions/tds-shared/api";
+import { Alert, ConfirmDialog, Spinner, toast } from "@tracht-digital-labs/tds-shared/components";
+import { apiFetch } from "@tracht-digital-labs/tds-shared/api";
 import {
   TAX,
   VIA,
@@ -17,8 +17,8 @@ import {
   type ProgrammeSettings,
   type TaxStatus,
 } from "./format";
-import { copyText } from "@tracht-digital-solutions/tds-shared/clipboard";
-import { downloadText } from "@tracht-digital-solutions/tds-shared/download";
+import { copyText } from "@tracht-digital-labs/tds-shared/clipboard";
+import { downloadText } from "@tracht-digital-labs/tds-shared/download";
 
 interface Overview {
   partners: Partner[];

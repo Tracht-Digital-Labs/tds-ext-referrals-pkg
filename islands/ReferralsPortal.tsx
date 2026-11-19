@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Alert, Spinner, toast } from "@tracht-digital-solutions/tds-shared/components";
-import { apiFetch, sendJson } from "@tracht-digital-solutions/tds-shared/api";
+import { Alert, Spinner, toast } from "@tracht-digital-labs/tds-shared/components";
+import { apiFetch, sendJson } from "@tracht-digital-labs/tds-shared/api";
 import {
   TAX,
   VIA,
@@ -16,7 +16,7 @@ import {
   type ProgrammeSettings,
   type TaxStatus,
 } from "./format";
-import { copyText } from "@tracht-digital-solutions/tds-shared/clipboard";
+import { copyText } from "@tracht-digital-labs/tds-shared/clipboard";
 
 interface Me {
   partner: Partner;

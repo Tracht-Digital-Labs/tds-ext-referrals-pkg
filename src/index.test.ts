@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { composeExtensions } from "@tracht-digital-solutions/tds-frontend-contract";
+import { composeExtensions } from "@tracht-digital-labs/tds-frontend-contract";
 import manifest from "./index";
 
 /**
@@ -26,7 +26,7 @@ describe("the referrals manifest", () => {
 
   it("points every specifier at this package", () => {
     const specs = [...(manifest.routes ?? []).map((r) => r.entrypoint), ...(manifest.settings ?? []).map((s) => s.island)];
-    for (const s of specs) expect(s).toMatch(/^@tracht-digital-solutions\/tds-ext-referrals\//);
+    for (const s of specs) expect(s).toMatch(/^@tracht-digital-labs\/tds-ext-referrals\//);
   });
 
   it("namespaces its i18n keys", () => {

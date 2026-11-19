@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, cleanup, fireEvent, within } from "@testing-library/react";
-import { primeRuntimeConfig } from "@tracht-digital-solutions/tds-shared/api";
+import { primeRuntimeConfig } from "@tracht-digital-labs/tds-shared/api";
 import ReferralsAdmin from "./ReferralsAdmin";
 
 const fetchMock = vi.fn();

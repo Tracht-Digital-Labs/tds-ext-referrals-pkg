@@ -1,7 +1,7 @@
 /** Shared formatting and wire types for the Empfehlungen islands. */
 
-import { describeFailureFrom } from "@tracht-digital-solutions/tds-shared/api";
-import { formatCents, formatIsoDay, parseEuros as parseEurosShared } from "@tracht-digital-solutions/tds-shared/format";
+import { describeFailureFrom } from "@tracht-digital-labs/tds-shared/api";
+import { formatCents, formatIsoDay, parseEuros as parseEurosShared } from "@tracht-digital-labs/tds-shared/format";
 
 export type CommissionStatus = "claimed" | "pending" | "approved" | "paid" | "rejected" | "reversed";
 

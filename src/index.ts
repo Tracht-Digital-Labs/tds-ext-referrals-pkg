@@ -1,4 +1,4 @@
-import { defineExtension } from "@tracht-digital-solutions/tds-frontend-contract";
+import { defineExtension } from "@tracht-digital-labs/tds-frontend-contract";
 
 /**
  * Empfehlungsprogramm: partners who bring in a sale earn a commission on its
@@ -34,14 +34,14 @@ export default defineExtension({
     {
       id: "referrals",
       label: "Empfehlungsprogramm",
-      island: "@tracht-digital-solutions/tds-ext-referrals/islands/Settings.astro",
+      island: "@tracht-digital-labs/tds-ext-referrals/islands/Settings.astro",
       order: 60,
     },
   ],
   routes: [
     {
       pattern: "/empfehlungen",
-      entrypoint: "@tracht-digital-solutions/tds-ext-referrals/pages/Index.astro",
+      entrypoint: "@tracht-digital-labs/tds-ext-referrals/pages/Index.astro",
       permission: "referrals:partner",
     },
   ],
